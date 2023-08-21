@@ -10,12 +10,56 @@
                 <li class="inline-block nav-items"><a href="index.html">ABOUT ME</a></li>
                 <li class="inline-block nav-items"><a href="skills.html">SKILLS</a></li>
                 <li class="inline-block nav-items"><a href="projects.html">PROJECTS</a></li>
-                <li class="inline-block nav-items"><a href="contact.html">CONTACT</a></li>
+                <li class="inline-block nav-items" id="myBtn">CONTACT</li>
             </ul>
             </div>
         </nav>
     </head>
     <body>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="footer">
+                    <h2>WANT TO CONNECT?</h2>
+                    <p>Feel free to reach out:</p>
+                    <div class="inline-block"><a href="mailto:mockpete@gmail.com"><img src="images/email.png"></a></div>
+                    <div class="inline-block"><a href="https://www.linkedin.com/in/markpetersen04/"><img src="images/linkedin.png"></a></div>
+                    <div><p>©2023</p></div>
+                </div>
+            </div>
+  
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
         <div class="hero">
             <img src="images/hero.png">
        </div>
@@ -29,13 +73,13 @@
                 </div>
             </div>
         </section>
-        <div class="footer">
+        <!-- <div class="footer">
             <h2>WANT TO CONNECT?</h2>
             <p>Feel free to reach out:</p>
             <div class="inline-block"><a href="mailto:mockpete@gmail.com"><img src="images/email.png"></a></div>
             <div class="inline-block"><a href="https://www.linkedin.com/in/markpetersen04/"><img src="images/linkedin.png"></a></div>
             <div><p>©2023</p></div>
-        </div>
+        </div> -->
     </body>
 
 </html>
